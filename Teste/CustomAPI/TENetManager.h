@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "Model_Dish.h"
+#import "Model_Chef.h"
 
 
 //接口定义地址
@@ -22,6 +23,11 @@
  读取当前厨师的所有菜品
  */
 #define kDishesFromChef          2
+
+/*
+ 读取所有菜品
+ */
+#define kAllDishes              3
 
 
 
