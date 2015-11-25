@@ -8,18 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Model_Dish.h"
+
 
 //接口定义地址
 
 /*
  增加菜品
  */
-#define addDish                 1
+#define kAddDish                 1
 
 /*
  读取当前厨师的所有菜品
  */
-#define dishesFromChef          2
+#define kDishesFromChef          2
 
 
 

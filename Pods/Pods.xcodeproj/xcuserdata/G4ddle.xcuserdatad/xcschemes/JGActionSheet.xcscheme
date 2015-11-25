@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F1510B91D25D57764CB59D9F"
+               BlueprintIdentifier = "CE1060E54B095484A3C13328"
                BuildableName = "libJGActionSheet.a"
                BlueprintName = "JGActionSheet"
                ReferencedContainer = "container:Pods.xcodeproj">
