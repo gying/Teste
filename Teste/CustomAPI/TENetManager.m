@@ -9,6 +9,7 @@
 #import "TENetManager.h"
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
+#import <MJExtension.h>
 
 @implementation TENetManager
 
@@ -23,7 +24,6 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
-    
     
     TENetManager *netManager = [[TENetManager alloc] init];
     netManager.completeBlock = completeBlock;
@@ -95,6 +95,23 @@
     }
     
     return requestDic;
+}
+
+
++ (NSMutableDictionary *)addDish: (Model_Dish *)dish {
+    return [TENetManager toRequestDicWithData:dish.mj_keyValues
+                                andRequestType:kAddDish];
+}
+
+
++ (NSMutableDictionary *)dishesFromChef: (Model_Chef *)chef {
+    return [TENetManager toRequestDicWithData:chef.mj_keyValues
+                               andRequestType:kDishesFromChef];
+}
+
++ (NSMutableDictionary *)allDishes: (Model_Dish *)dish {
+    return [TENetManager toRequestDicWithData:dish.mj_keyValues
+                               andRequestType:kAllDishes];
 }
 
 

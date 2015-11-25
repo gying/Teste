@@ -8,18 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Model_Dish.h"
+#import "Model_Chef.h"
+
 
 //接口定义地址
 
 /*
  增加菜品
  */
-#define addDish                 1
+#define kAddDish                 1
 
 /*
  读取当前厨师的所有菜品
  */
-#define dishesFromChef          2
+#define kDishesFromChef          2
+
+/*
+ 读取所有菜品
+ */
+#define kAllDishes              3
 
 
 
@@ -39,6 +47,7 @@ typedef void (^requestFailureBlock)(NSError *error, NSURLSessionDataTask *task);
 + (void)requestNetWithDic:(NSMutableDictionary *)sendDic
                  complete:(finishCallbackBlock)completeBlock
                   failure:(requestFailureBlock)failureBlock;
+
 
 
 
