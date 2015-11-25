@@ -7,12 +7,15 @@
 //
 
 #import "AddDishesViewController.h"
+#import "Model_Dish.h"
 
 @interface AddDishesViewController ()
 
 @end
 
-@implementation AddDishesViewController
+@implementation AddDishesViewController{
+    Model_Dish * _dish;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
