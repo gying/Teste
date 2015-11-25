@@ -9,7 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JGActionSheet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00E3D56C8A2EC22E0C34DE7DD6D922B2</key>
+		<key>12CADCF1B22B001DF467E69414072051</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37CAED0E5CEF856CEB4F2B9519510A24</key>
+		<key>5352D432641F0656C90741034E32F31E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8293DD26D4F86EA60B3AF0B5F2720479</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B281DA29A9C3EDFB45BA53651F6BA611</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D9012F074C6E10512EA798C11D2A2564</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4EDE1A76FF4488402F0DCE0ADC96C64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
