@@ -98,6 +98,12 @@
 }
 
 
++ (NSMutableDictionary *)addDish: (Model_user_user *)userRelation {
+    return [SRNet_Manager toRequestDicWithData:userRelation.keyValues
+                                andRequestType:kAddFriend];
+}
+
+
 
 
 
