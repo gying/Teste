@@ -11,6 +11,7 @@
 @interface Model_Dish : NSObject
 @property(strong,nonatomic)NSNumber * pk_dish;
 @property(strong,nonatomic)NSString * desc;
+@property(strong,nonatomic)NSString * name;
 @property(strong,nonatomic)NSNumber * price;
 @property(strong,nonatomic)NSDate * add_time;
 @property(strong,nonatomic)NSNumber * type;

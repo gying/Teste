@@ -7,16 +7,46 @@
 //
 
 #import "AddDishesViewController.h"
+#import "Model_Dish.h"
+#import "TENetManager.h"
 
 @interface AddDishesViewController ()
 
 @end
 
-@implementation AddDishesViewController
+@implementation AddDishesViewController{
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+#pragma mark -- 上传dish
+//    [TENetManager requestNetWithDic:[TENetManager addDish:_dish] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
+    //成功
+//        code
+//    } failure:^(NSError *error, NSURLSessionDataTask *task) {
+    //失败
+//        code
+//    }]；
+    
+}
+
+//完成添加
+- (IBAction)tapDoneButton:(id)sender {
+    Model_Dish * dish = [Model_Dish new];
+    dish.name = self.dishName.text;
+    dish.price = [NSNumber numberWithFloat:[self.dishPrice.text floatValue]];
+    dish.rating = [NSNumber numberWithFloat:[self.dishRating.text floatValue]];
+    dish.fk_chef = [NSNumber numberWithFloat:[self.chef.text floatValue]];
+    dish.desc = self.dishDesc.text;
+#pragma mark -- 上传dish
+    [TENetManager requestNetWithDic:[TENetManager addDish:dish] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
+        //成功
+        } failure:^(NSError *error, NSURLSessionDataTask *task) {
+            //失败
+        }];
 }
 
 - (void)didReceiveMemoryWarning {

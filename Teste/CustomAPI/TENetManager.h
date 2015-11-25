@@ -49,6 +49,6 @@ typedef void (^requestFailureBlock)(NSError *error, NSURLSessionDataTask *task);
                   failure:(requestFailureBlock)failureBlock;
 
 
-
++ (NSMutableDictionary *)addDish: (Model_Dish *)dish;
 
 @end
