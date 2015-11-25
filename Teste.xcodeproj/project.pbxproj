@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56609711FA44A57A5F039908 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F928E0D34406BEF22818734 /* libPods.a */; };
 		F0C59D331C054E3700564AC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D321C054E3700564AC6 /* main.m */; };
 		F0C59D361C054E3700564AC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D351C054E3700564AC6 /* AppDelegate.m */; };
 		F0C59D3C1C054E3700564AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C59D3A1C054E3700564AC6 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		F0C59D711C054E7900564AC6 /* DishesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D6B1C054E7800564AC6 /* DishesDetailViewController.m */; };
 		F0C59D721C054E7900564AC6 /* DishesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D6D1C054E7900564AC6 /* DishesTableViewCell.m */; };
 		F0C59D731C054E7900564AC6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D6F1C054E7900564AC6 /* ViewController.m */; };
+		F0C59D781C0552A400564AC6 /* TENetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D771C0552A400564AC6 /* TENetManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EB8F3D196E5748E011F3E81 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5F928E0D34406BEF22818734 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CEA728D5EA97CDF7A31B630 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F0C59D2E1C054E3700564AC6 /* Teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C59D321C054E3700564AC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0C59D341C054E3700564AC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +67,8 @@
 		F0C59D6D1C054E7900564AC6 /* DishesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishesTableViewCell.m; sourceTree = "<group>"; };
 		F0C59D6E1C054E7900564AC6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F0C59D6F1C054E7900564AC6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F0C59D761C0552A400564AC6 /* TENetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENetManager.h; sourceTree = "<group>"; };
+		F0C59D771C0552A400564AC6 /* TENetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENetManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56609711FA44A57A5F039908 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D58E35F65A14D61F06FDC67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F928E0D34406BEF22818734 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61AC5D5783494E890AFBF090 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EB8F3D196E5748E011F3E81 /* Pods.debug.xcconfig */,
+				7CEA728D5EA97CDF7A31B630 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F0C59D251C054E3700564AC6 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +121,8 @@
 				F0C59D4D1C054E3700564AC6 /* TesteTests */,
 				F0C59D581C054E3700564AC6 /* TesteUITests */,
 				F0C59D2F1C054E3700564AC6 /* Products */,
+				61AC5D5783494E890AFBF090 /* Pods */,
+				5D58E35F65A14D61F06FDC67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +139,7 @@
 		F0C59D301C054E3700564AC6 /* Teste */ = {
 			isa = PBXGroup;
 			children = (
+				F0C59D751C05524300564AC6 /* CustomAPI */,
 				F0C59D671C054E7800564AC6 /* ViewController */,
 				F0C59D341C054E3700564AC6 /* AppDelegate.h */,
 				F0C59D351C054E3700564AC6 /* AppDelegate.m */,
@@ -166,6 +194,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		F0C59D751C05524300564AC6 /* CustomAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F0C59D761C0552A400564AC6 /* TENetManager.h */,
+				F0C59D771C0552A400564AC6 /* TENetManager.m */,
+			);
+			path = CustomAPI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0C59D5E1C054E3700564AC6 /* Build configuration list for PBXNativeTarget "Teste" */;
 			buildPhases = (
+				A13E9B782C6331FBF7B3CE40 /* Check Pods Manifest.lock */,
 				F0C59D2A1C054E3700564AC6 /* Sources */,
 				F0C59D2B1C054E3700564AC6 /* Frameworks */,
 				F0C59D2C1C054E3700564AC6 /* Resources */,
+				FAC343E291F2B7FB7182B3CB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +330,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A13E9B782C6331FBF7B3CE40 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FAC343E291F2B7FB7182B3CB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0C59D2A1C054E3700564AC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -300,6 +372,7 @@
 				F0C59D721C054E7900564AC6 /* DishesTableViewCell.m in Sources */,
 				F0C59D731C054E7900564AC6 /* ViewController.m in Sources */,
 				F0C59D711C054E7900564AC6 /* DishesDetailViewController.m in Sources */,
+				F0C59D781C0552A400564AC6 /* TENetManager.m in Sources */,
 				F0C59D361C054E3700564AC6 /* AppDelegate.m in Sources */,
 				F0C59D331C054E3700564AC6 /* main.m in Sources */,
 				F0C59D3F1C054E3700564AC6 /* Teste.xcdatamodeld in Sources */,
@@ -439,9 +512,11 @@
 		};
 		F0C59D5F1C054E3700564AC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB8F3D196E5748E011F3E81 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Teste/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superRabbit.Teste;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,9 +525,11 @@
 		};
 		F0C59D601C054E3700564AC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CEA728D5EA97CDF7A31B630 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Teste/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superRabbit.Teste;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -526,6 +603,7 @@
 				F0C59D601C054E3700564AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0C59D611C054E3700564AC6 /* Build configuration list for PBXNativeTarget "TesteTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +612,7 @@
 				F0C59D631C054E3700564AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0C59D641C054E3700564AC6 /* Build configuration list for PBXNativeTarget "TesteUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +621,7 @@
 				F0C59D661C054E3700564AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
