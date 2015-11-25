@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C603507F1C055A310023FA59 /* Model_Address.m in Sources */ = {isa = PBXBuildFile; fileRef = C603507E1C055A310023FA59 /* Model_Address.m */; settings = {ASSET_TAGS = (); }; };
+		C60350821C055A450023FA59 /* Model_Chef.m in Sources */ = {isa = PBXBuildFile; fileRef = C60350811C055A450023FA59 /* Model_Chef.m */; settings = {ASSET_TAGS = (); }; };
+		C60350851C055A550023FA59 /* Model_Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = C60350841C055A550023FA59 /* Model_Dish.m */; settings = {ASSET_TAGS = (); }; };
+		C60350881C055A6B0023FA59 /* Model_Dish_Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = C60350871C055A6B0023FA59 /* Model_Dish_Detail.m */; settings = {ASSET_TAGS = (); }; };
+		C603508B1C055A810023FA59 /* Model_Order.m in Sources */ = {isa = PBXBuildFile; fileRef = C603508A1C055A810023FA59 /* Model_Order.m */; settings = {ASSET_TAGS = (); }; };
+		C603508E1C055A910023FA59 /* Model_User.m in Sources */ = {isa = PBXBuildFile; fileRef = C603508D1C055A910023FA59 /* Model_User.m */; settings = {ASSET_TAGS = (); }; };
 		F0C59D331C054E3700564AC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D321C054E3700564AC6 /* main.m */; };
 		F0C59D361C054E3700564AC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D351C054E3700564AC6 /* AppDelegate.m */; };
 		F0C59D3C1C054E3700564AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C59D3A1C054E3700564AC6 /* Main.storyboard */; };
@@ -39,6 +45,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C603507D1C055A310023FA59 /* Model_Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_Address.h; sourceTree = "<group>"; };
+		C603507E1C055A310023FA59 /* Model_Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_Address.m; sourceTree = "<group>"; };
+		C60350801C055A450023FA59 /* Model_Chef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_Chef.h; sourceTree = "<group>"; };
+		C60350811C055A450023FA59 /* Model_Chef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_Chef.m; sourceTree = "<group>"; };
+		C60350831C055A550023FA59 /* Model_Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_Dish.h; sourceTree = "<group>"; };
+		C60350841C055A550023FA59 /* Model_Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_Dish.m; sourceTree = "<group>"; };
+		C60350861C055A6B0023FA59 /* Model_Dish_Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_Dish_Detail.h; sourceTree = "<group>"; };
+		C60350871C055A6B0023FA59 /* Model_Dish_Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_Dish_Detail.m; sourceTree = "<group>"; };
+		C60350891C055A810023FA59 /* Model_Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_Order.h; sourceTree = "<group>"; };
+		C603508A1C055A810023FA59 /* Model_Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_Order.m; sourceTree = "<group>"; };
+		C603508C1C055A910023FA59 /* Model_User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_User.h; sourceTree = "<group>"; };
+		C603508D1C055A910023FA59 /* Model_User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_User.m; sourceTree = "<group>"; };
 		F0C59D2E1C054E3700564AC6 /* Teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C59D321C054E3700564AC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0C59D341C054E3700564AC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,8 +76,8 @@
 		F0C59D691C054E7800564AC6 /* AddDishesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDishesViewController.m; sourceTree = "<group>"; };
 		F0C59D6A1C054E7800564AC6 /* DishesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishesDetailViewController.h; sourceTree = "<group>"; };
 		F0C59D6B1C054E7800564AC6 /* DishesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishesDetailViewController.m; sourceTree = "<group>"; };
-		F0C59D6C1C054E7800564AC6 /* DishesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishesTableViewCell.h; sourceTree = "<group>"; };
-		F0C59D6D1C054E7900564AC6 /* DishesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishesTableViewCell.m; sourceTree = "<group>"; };
+		F0C59D6C1C054E7800564AC6 /* DishesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishesTableViewCell.h; path = ../ViewController/DishesTableViewCell.h; sourceTree = "<group>"; };
+		F0C59D6D1C054E7900564AC6 /* DishesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DishesTableViewCell.m; path = ../ViewController/DishesTableViewCell.m; sourceTree = "<group>"; };
 		F0C59D6E1C054E7900564AC6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F0C59D6F1C054E7900564AC6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +107,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C60350721C0559120023FA59 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0C59D6C1C054E7800564AC6 /* DishesTableViewCell.h */,
+				F0C59D6D1C054E7900564AC6 /* DishesTableViewCell.m */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		C60350731C0559120023FA59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C603507D1C055A310023FA59 /* Model_Address.h */,
+				C603507E1C055A310023FA59 /* Model_Address.m */,
+				C60350801C055A450023FA59 /* Model_Chef.h */,
+				C60350811C055A450023FA59 /* Model_Chef.m */,
+				C60350831C055A550023FA59 /* Model_Dish.h */,
+				C60350841C055A550023FA59 /* Model_Dish.m */,
+				C60350861C055A6B0023FA59 /* Model_Dish_Detail.h */,
+				C60350871C055A6B0023FA59 /* Model_Dish_Detail.m */,
+				C60350891C055A810023FA59 /* Model_Order.h */,
+				C603508A1C055A810023FA59 /* Model_Order.m */,
+				C603508C1C055A910023FA59 /* Model_User.h */,
+				C603508D1C055A910023FA59 /* Model_User.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F0C59D251C054E3700564AC6 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +158,8 @@
 		F0C59D301C054E3700564AC6 /* Teste */ = {
 			isa = PBXGroup;
 			children = (
+				C60350731C0559120023FA59 /* Model */,
+				C60350721C0559120023FA59 /* Custom Cell */,
 				F0C59D671C054E7800564AC6 /* ViewController */,
 				F0C59D341C054E3700564AC6 /* AppDelegate.h */,
 				F0C59D351C054E3700564AC6 /* AppDelegate.m */,
@@ -158,8 +206,6 @@
 				F0C59D691C054E7800564AC6 /* AddDishesViewController.m */,
 				F0C59D6A1C054E7800564AC6 /* DishesDetailViewController.h */,
 				F0C59D6B1C054E7800564AC6 /* DishesDetailViewController.m */,
-				F0C59D6C1C054E7800564AC6 /* DishesTableViewCell.h */,
-				F0C59D6D1C054E7900564AC6 /* DishesTableViewCell.m */,
 				F0C59D6E1C054E7900564AC6 /* ViewController.h */,
 				F0C59D6F1C054E7900564AC6 /* ViewController.m */,
 			);
@@ -296,13 +342,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60350881C055A6B0023FA59 /* Model_Dish_Detail.m in Sources */,
+				C603507F1C055A310023FA59 /* Model_Address.m in Sources */,
 				F0C59D701C054E7900564AC6 /* AddDishesViewController.m in Sources */,
+				C603508E1C055A910023FA59 /* Model_User.m in Sources */,
+				C60350821C055A450023FA59 /* Model_Chef.m in Sources */,
+				C603508B1C055A810023FA59 /* Model_Order.m in Sources */,
 				F0C59D721C054E7900564AC6 /* DishesTableViewCell.m in Sources */,
 				F0C59D731C054E7900564AC6 /* ViewController.m in Sources */,
 				F0C59D711C054E7900564AC6 /* DishesDetailViewController.m in Sources */,
 				F0C59D361C054E3700564AC6 /* AppDelegate.m in Sources */,
 				F0C59D331C054E3700564AC6 /* main.m in Sources */,
 				F0C59D3F1C054E3700564AC6 /* Teste.xcdatamodeld in Sources */,
+				C60350851C055A550023FA59 /* Model_Dish.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -430,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -526,6 +578,7 @@
 				F0C59D601C054E3700564AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0C59D611C054E3700564AC6 /* Build configuration list for PBXNativeTarget "TesteTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +587,7 @@
 				F0C59D631C054E3700564AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0C59D641C054E3700564AC6 /* Build configuration list for PBXNativeTarget "TesteUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +596,7 @@
 				F0C59D661C054E3700564AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
