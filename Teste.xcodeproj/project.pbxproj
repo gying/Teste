@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		56609711FA44A57A5F039908 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F928E0D34406BEF22818734 /* libPods.a */; };
+		C65EFD491C058D970046BCFC /* Model_Address.m in Sources */ = {isa = PBXBuildFile; fileRef = C65EFD3E1C058D970046BCFC /* Model_Address.m */; settings = {ASSET_TAGS = (); }; };
+		C65EFD4A1C058D970046BCFC /* Model_Chef.m in Sources */ = {isa = PBXBuildFile; fileRef = C65EFD401C058D970046BCFC /* Model_Chef.m */; settings = {ASSET_TAGS = (); }; };
+		C65EFD4B1C058D970046BCFC /* Model_Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = C65EFD421C058D970046BCFC /* Model_Dish.m */; settings = {ASSET_TAGS = (); }; };
+		C65EFD4C1C058D970046BCFC /* Model_Dish_Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = C65EFD441C058D970046BCFC /* Model_Dish_Detail.m */; settings = {ASSET_TAGS = (); }; };
+		C65EFD4D1C058D970046BCFC /* Model_Order.m in Sources */ = {isa = PBXBuildFile; fileRef = C65EFD461C058D970046BCFC /* Model_Order.m */; settings = {ASSET_TAGS = (); }; };
+		C65EFD4E1C058D970046BCFC /* Model_User.m in Sources */ = {isa = PBXBuildFile; fileRef = C65EFD481C058D970046BCFC /* Model_User.m */; settings = {ASSET_TAGS = (); }; };
+		C65EFD541C058E860046BCFC /* DishesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C65EFD531C058E860046BCFC /* DishesTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		F0C59D331C054E3700564AC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D321C054E3700564AC6 /* main.m */; };
 		F0C59D361C054E3700564AC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D351C054E3700564AC6 /* AppDelegate.m */; };
 		F0C59D3C1C054E3700564AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C59D3A1C054E3700564AC6 /* Main.storyboard */; };
@@ -18,7 +25,6 @@
 		F0C59D5A1C054E3700564AC6 /* TesteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D591C054E3700564AC6 /* TesteUITests.m */; };
 		F0C59D701C054E7900564AC6 /* AddDishesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D691C054E7800564AC6 /* AddDishesViewController.m */; };
 		F0C59D711C054E7900564AC6 /* DishesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D6B1C054E7800564AC6 /* DishesDetailViewController.m */; };
-		F0C59D721C054E7900564AC6 /* DishesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D6D1C054E7900564AC6 /* DishesTableViewCell.m */; };
 		F0C59D731C054E7900564AC6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D6F1C054E7900564AC6 /* ViewController.m */; };
 		F0C59D781C0552A400564AC6 /* TENetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D771C0552A400564AC6 /* TENetManager.m */; };
 /* End PBXBuildFile section */
@@ -44,6 +50,20 @@
 		0EB8F3D196E5748E011F3E81 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5F928E0D34406BEF22818734 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CEA728D5EA97CDF7A31B630 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C65EFD3D1C058D970046BCFC /* Model_Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_Address.h; sourceTree = "<group>"; };
+		C65EFD3E1C058D970046BCFC /* Model_Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_Address.m; sourceTree = "<group>"; };
+		C65EFD3F1C058D970046BCFC /* Model_Chef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_Chef.h; sourceTree = "<group>"; };
+		C65EFD401C058D970046BCFC /* Model_Chef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_Chef.m; sourceTree = "<group>"; };
+		C65EFD411C058D970046BCFC /* Model_Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_Dish.h; sourceTree = "<group>"; };
+		C65EFD421C058D970046BCFC /* Model_Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_Dish.m; sourceTree = "<group>"; };
+		C65EFD431C058D970046BCFC /* Model_Dish_Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_Dish_Detail.h; sourceTree = "<group>"; };
+		C65EFD441C058D970046BCFC /* Model_Dish_Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_Dish_Detail.m; sourceTree = "<group>"; };
+		C65EFD451C058D970046BCFC /* Model_Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_Order.h; sourceTree = "<group>"; };
+		C65EFD461C058D970046BCFC /* Model_Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_Order.m; sourceTree = "<group>"; };
+		C65EFD471C058D970046BCFC /* Model_User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model_User.h; sourceTree = "<group>"; };
+		C65EFD481C058D970046BCFC /* Model_User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_User.m; sourceTree = "<group>"; };
+		C65EFD521C058E860046BCFC /* DishesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishesTableViewCell.h; sourceTree = "<group>"; };
+		C65EFD531C058E860046BCFC /* DishesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishesTableViewCell.m; sourceTree = "<group>"; };
 		F0C59D2E1C054E3700564AC6 /* Teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C59D321C054E3700564AC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0C59D341C054E3700564AC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,8 +83,6 @@
 		F0C59D691C054E7800564AC6 /* AddDishesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDishesViewController.m; sourceTree = "<group>"; };
 		F0C59D6A1C054E7800564AC6 /* DishesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishesDetailViewController.h; sourceTree = "<group>"; };
 		F0C59D6B1C054E7800564AC6 /* DishesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishesDetailViewController.m; sourceTree = "<group>"; };
-		F0C59D6C1C054E7800564AC6 /* DishesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishesTableViewCell.h; sourceTree = "<group>"; };
-		F0C59D6D1C054E7900564AC6 /* DishesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishesTableViewCell.m; sourceTree = "<group>"; };
 		F0C59D6E1C054E7900564AC6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F0C59D6F1C054E7900564AC6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F0C59D761C0552A400564AC6 /* TENetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENetManager.h; sourceTree = "<group>"; };
@@ -114,6 +132,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C65EFD3C1C058D970046BCFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C65EFD3D1C058D970046BCFC /* Model_Address.h */,
+				C65EFD3E1C058D970046BCFC /* Model_Address.m */,
+				C65EFD3F1C058D970046BCFC /* Model_Chef.h */,
+				C65EFD401C058D970046BCFC /* Model_Chef.m */,
+				C65EFD411C058D970046BCFC /* Model_Dish.h */,
+				C65EFD421C058D970046BCFC /* Model_Dish.m */,
+				C65EFD431C058D970046BCFC /* Model_Dish_Detail.h */,
+				C65EFD441C058D970046BCFC /* Model_Dish_Detail.m */,
+				C65EFD451C058D970046BCFC /* Model_Order.h */,
+				C65EFD461C058D970046BCFC /* Model_Order.m */,
+				C65EFD471C058D970046BCFC /* Model_User.h */,
+				C65EFD481C058D970046BCFC /* Model_User.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C65EFD511C058E860046BCFC /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C65EFD521C058E860046BCFC /* DishesTableViewCell.h */,
+				C65EFD531C058E860046BCFC /* DishesTableViewCell.m */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
 		F0C59D251C054E3700564AC6 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +185,8 @@
 		F0C59D301C054E3700564AC6 /* Teste */ = {
 			isa = PBXGroup;
 			children = (
+				C65EFD511C058E860046BCFC /* Custom Cell */,
+				C65EFD3C1C058D970046BCFC /* Model */,
 				F0C59D751C05524300564AC6 /* CustomAPI */,
 				F0C59D671C054E7800564AC6 /* ViewController */,
 				F0C59D341C054E3700564AC6 /* AppDelegate.h */,
@@ -186,8 +234,6 @@
 				F0C59D691C054E7800564AC6 /* AddDishesViewController.m */,
 				F0C59D6A1C054E7800564AC6 /* DishesDetailViewController.h */,
 				F0C59D6B1C054E7800564AC6 /* DishesDetailViewController.m */,
-				F0C59D6C1C054E7800564AC6 /* DishesTableViewCell.h */,
-				F0C59D6D1C054E7900564AC6 /* DishesTableViewCell.m */,
 				F0C59D6E1C054E7900564AC6 /* ViewController.h */,
 				F0C59D6F1C054E7900564AC6 /* ViewController.m */,
 			);
@@ -369,13 +415,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C59D701C054E7900564AC6 /* AddDishesViewController.m in Sources */,
-				F0C59D721C054E7900564AC6 /* DishesTableViewCell.m in Sources */,
 				F0C59D731C054E7900564AC6 /* ViewController.m in Sources */,
+				C65EFD491C058D970046BCFC /* Model_Address.m in Sources */,
+				C65EFD4E1C058D970046BCFC /* Model_User.m in Sources */,
+				C65EFD4B1C058D970046BCFC /* Model_Dish.m in Sources */,
+				C65EFD4D1C058D970046BCFC /* Model_Order.m in Sources */,
 				F0C59D711C054E7900564AC6 /* DishesDetailViewController.m in Sources */,
+				C65EFD541C058E860046BCFC /* DishesTableViewCell.m in Sources */,
 				F0C59D781C0552A400564AC6 /* TENetManager.m in Sources */,
 				F0C59D361C054E3700564AC6 /* AppDelegate.m in Sources */,
+				C65EFD4C1C058D970046BCFC /* Model_Dish_Detail.m in Sources */,
 				F0C59D331C054E3700564AC6 /* main.m in Sources */,
 				F0C59D3F1C054E3700564AC6 /* Teste.xcdatamodeld in Sources */,
+				C65EFD4A1C058D970046BCFC /* Model_Chef.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +593,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TesteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superRabbit.TesteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,6 +606,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TesteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superRabbit.TesteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = TesteUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superRabbit.TesteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -576,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = TesteUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superRabbit.TesteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
