@@ -17,17 +17,21 @@
 /*
  增加菜品
  */
-#define kAddDish                 1
+#define kAddDish                1
 
 /*
  读取当前厨师的所有菜品
  */
-#define kDishesFromChef          2
+#define kDishesFromChef         2
 
 /*
  读取所有菜品
  */
 #define kAllDishes              3
+/*
+ 禁用菜品
+ */
+#define kDisableDish            4
 
 
 

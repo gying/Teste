@@ -29,7 +29,6 @@
     netManager.completeBlock = completeBlock;
     netManager.failureBlock = failureBlock;
     
-    
     [manager POST:urlString
        parameters:sendDic
           success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -114,6 +113,14 @@
                                andRequestType:kAllDishes];
 }
 
+
++ (NSMutableDictionary *)disableDish: (Model_Dish *)dish {
+    Model_Dish *sendDish = [Model_Dish new];
+    sendDish.pk_dish = dish.pk_dish;
+    sendDish.enable = @0;
+    return [TENetManager toRequestDicWithData:sendDish.mj_keyValues
+                               andRequestType:kDisableDish];
+}
 
 
 
