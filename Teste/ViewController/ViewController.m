@@ -13,7 +13,7 @@
 #import "Model_Dish.h"
 #import "DishesDetailViewController.h"
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate> {
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate, DishDelegate> {
     NSMutableArray *_dishesAry;
     DishesDetailViewController * _childController;
     
@@ -25,18 +25,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.DishesTableView.delegate = self;
-    self.DishesTableView.dataSource = self;
+    self.dishesTableView.delegate = self;
+    self.dishesTableView.dataSource = self;
     //下载数据
     _dishesAry = [NSMutableArray new];
+    [self loadDataFromNet];
+
+}
+
+- (void)dishesReloadData:(Model_Dish *)dish {
+    if (dish) {
+        //修改
+        [self.dishesTableView reloadData];
+    } else {
+        //删除
+        [self loadDataFromNet];
+    }
+}
+
+- (void)loadDataFromNet {
     [TENetManager requestNetWithDic:[TENetManager allDishes:[Model_Dish new]] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
         if (jsonDic) {
-            _dishesAry = [Model_Dish mj_objectArrayWithKeyValuesArray:jsonDic];
+            _dishesAry = [Model_Dish mj_objectArrayWithKeyValuesArray:jsonDic];[self dismissViewControllerAnimated:YES completion:nil];
         }
-        [self.DishesTableView reloadData];
+        [self.dishesTableView reloadData];
     } failure:^(NSError *error, NSURLSessionDataTask *task) {
     }];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,9 +90,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([@"GoDishesDetailViewController" isEqualToString:segue.identifier]) {
         //进入预付界面
-        Model_Dish * dish = [_dishesAry objectAtIndex:[self.DishesTableView indexPathForCell:sender].row];
+        Model_Dish * dish = [_dishesAry objectAtIndex:[self.dishesTableView indexPathForCell:sender].row];
         DishesDetailViewController *childController = (DishesDetailViewController *)segue.destinationViewController;
         childController.dish = dish;
+        childController.delegate = self;
     }
     
 }

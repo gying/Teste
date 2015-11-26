@@ -34,7 +34,9 @@
     dish.remark = self.dishDescTextView.text;
 #pragma mark -- 上传dish
     [TENetManager requestNetWithDic:[TENetManager addDish:dish] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
-        //成功
+        //成功之后跟视图表格更新reloadata
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
         } failure:^(NSError *error, NSURLSessionDataTask *task) {
             //失败
         }];
@@ -44,6 +46,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)tapBackButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
