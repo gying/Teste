@@ -31,7 +31,7 @@
 /*
  禁用菜品
  */
-#define kDisableDish            4
+#define kUpdateDish            4
 
 
 
@@ -56,5 +56,7 @@ typedef void (^requestFailureBlock)(NSError *error, NSURLSessionDataTask *task);
 + (NSMutableDictionary *)addDish: (Model_Dish *)dish;
 
 + (NSMutableDictionary *)allDishes: (Model_Dish *)dish;
+
++ (NSMutableDictionary *)updateDish: (Model_Dish *)dish;
 
 @end
