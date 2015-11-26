@@ -8,8 +8,16 @@
 
 #import "ViewController.h"
 #import "DishesTableViewCell.h"
+#import "TENetManager.h"
+#import <MJExtension.h>
+#import "Model_Dish.h"
+#import "DishesDetailViewController.h"
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate> {
+    NSMutableArray *_dishesAry;
+    DishesDetailViewController * _childController;
+    
+}
 
 @end
 
@@ -19,8 +27,15 @@
     [super viewDidLoad];
     self.DishesTableView.delegate = self;
     self.DishesTableView.dataSource = self;
-    
-    // Do any additional setup after loading the view, typically from a nib.
+    //下载数据
+    _dishesAry = [NSMutableArray new];
+    [TENetManager requestNetWithDic:[TENetManager allDishes:[Model_Dish new]] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
+        if (jsonDic) {
+            _dishesAry = [Model_Dish mj_objectArrayWithKeyValuesArray:jsonDic];
+        }
+        [self.DishesTableView reloadData];
+    } failure:^(NSError *error, NSURLSessionDataTask *task) {
+    }];
 
 }
 
@@ -32,11 +47,14 @@
 
 #pragma mark -- DishesTableView协议
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
-}
+    if (_dishesAry) {
+        return _dishesAry.count;
+    }else{
+        return 1;
+    }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+    
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     DishesTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"DishesTableViewCell" forIndexPath:indexPath ];
@@ -44,10 +62,24 @@
         cell = [[DishesTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DishesTableViewCell"];
     }
     
-    cell.backgroundColor = [UIColor redColor];
+    Model_Dish * dish = [_dishesAry objectAtIndex:indexPath.row];
+    cell.textLabel.text = dish.name;
     return cell;
     
+}
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    Model_Dish * dish = [_dishesAry objectAtIndex:indexPath.row];
+}
+
+//tapNextPage
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([@"GoDishesDetailViewController" isEqualToString:segue.identifier]) {
+        //进入预付界面
+        Model_Dish * dish = [_dishesAry objectAtIndex:[self.DishesTableView indexPathForCell:sender].row];
+        DishesDetailViewController *childController = (DishesDetailViewController *)segue.destinationViewController;
+        childController.dish = dish;
+    }
     
 }
 

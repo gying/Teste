@@ -19,7 +19,7 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad]; 
     // Do any additional setup after loading the view.
     
 #pragma mark -- 上传dish
@@ -36,11 +36,11 @@
 //完成添加
 - (IBAction)tapDoneButton:(id)sender {
     Model_Dish * dish = [Model_Dish new];
-    dish.name = self.dishName.text;
-    dish.price = [NSNumber numberWithFloat:[self.dishPrice.text floatValue]];
-    dish.rating = [NSNumber numberWithFloat:[self.dishRating.text floatValue]];
-    dish.fk_chef = [NSNumber numberWithFloat:[self.chef.text floatValue]];
-    dish.remark = self.dishDesc.text;
+    dish.name = self.dishNameTextField.text;
+    dish.price = [NSNumber numberWithFloat:[self.dishPriceTextField.text floatValue]];
+    dish.rating = [NSNumber numberWithFloat:[self.dishRatingTextField.text floatValue]];
+    dish.fk_chef = [NSNumber numberWithFloat:[self.chefTextField.text floatValue]];
+    dish.remark = self.dishDescTextView.text;
 #pragma mark -- 上传dish
     [TENetManager requestNetWithDic:[TENetManager addDish:dish] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
         //成功
