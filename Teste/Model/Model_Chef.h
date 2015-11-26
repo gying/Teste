@@ -18,4 +18,5 @@
 @property(strong,nonatomic)NSNumber * level;
 @property(strong,nonatomic)NSNumber * type;
 @property(strong,nonatomic)NSNumber * enable;
+@property(strong, nonatomic)NSString *password;
 @end
