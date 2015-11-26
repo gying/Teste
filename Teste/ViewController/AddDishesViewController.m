@@ -22,15 +22,6 @@
     [super viewDidLoad]; 
     // Do any additional setup after loading the view.
     
-#pragma mark -- 上传dish
-//    [TENetManager requestNetWithDic:[TENetManager addDish:_dish] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
-    //成功
-//        code
-//    } failure:^(NSError *error, NSURLSessionDataTask *task) {
-    //失败
-//        code
-//    }]；
-    
 }
 
 //完成添加
