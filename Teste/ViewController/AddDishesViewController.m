@@ -40,7 +40,7 @@
     dish.price = [NSNumber numberWithFloat:[self.dishPrice.text floatValue]];
     dish.rating = [NSNumber numberWithFloat:[self.dishRating.text floatValue]];
     dish.fk_chef = [NSNumber numberWithFloat:[self.chef.text floatValue]];
-    dish.desc = self.dishDesc.text;
+    dish.remark = self.dishDesc.text;
 #pragma mark -- 上传dish
     [TENetManager requestNetWithDic:[TENetManager addDish:dish] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
         //成功

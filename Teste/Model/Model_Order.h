@@ -20,6 +20,6 @@
 @property(strong,nonatomic)NSNumber * count;
 @property(strong,nonatomic)NSNumber * money;
 @property(strong,nonatomic)NSNumber * process;
-@property(strong,nonatomic)NSString * desc;
+@property(strong,nonatomic)NSString * remark;
 @property(strong,nonatomic)NSNumber * enable;
 @end
