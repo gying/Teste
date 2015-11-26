@@ -14,7 +14,7 @@
 @property(strong,nonatomic)NSString * contacts;
 @property(strong,nonatomic)NSString * phone;
 @property(strong,nonatomic)NSString * address;
-@property(strong,nonatomic)NSString * desc;
+@property(strong,nonatomic)NSString * remark;
 @property(strong,nonatomic)NSString * zipcode;
 @property(strong,nonatomic)NSNumber * enable;
 

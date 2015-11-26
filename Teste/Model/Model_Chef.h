@@ -11,7 +11,7 @@
 @interface Model_Chef : NSObject
 @property(strong,nonatomic)NSNumber * pk_chef;
 @property(strong,nonatomic)NSString * avatar_path;
-@property(strong,nonatomic)NSString * desc;
+@property(strong,nonatomic)NSString * remark;
 @property(strong,nonatomic)NSString * phone;
 @property(strong,nonatomic)NSString * name;
 @property(strong,nonatomic)NSDate * add_time;
