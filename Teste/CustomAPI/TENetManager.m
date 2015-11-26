@@ -119,7 +119,12 @@
     sendDish.pk_dish = dish.pk_dish;
     sendDish.enable = @0;
     return [TENetManager toRequestDicWithData:sendDish.mj_keyValues
-                               andRequestType:kDisableDish];
+                               andRequestType:kUpdateDish];
+}
+
++ (NSMutableDictionary *)updateDish: (Model_Dish *)dish {
+    return [TENetManager toRequestDicWithData:dish.mj_keyValues
+                               andRequestType:kUpdateDish];
 }
 
 
