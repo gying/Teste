@@ -57,6 +57,9 @@ typedef void (^requestFailureBlock)(NSError *error, NSURLSessionDataTask *task);
 
 + (NSMutableDictionary *)allDishes: (Model_Dish *)dish;
 
+
++ (NSMutableDictionary *)disableDish: (Model_Dish *)dish;
+
 + (NSMutableDictionary *)updateDish: (Model_Dish *)dish;
 
 @end
