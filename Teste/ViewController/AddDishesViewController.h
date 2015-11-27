@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Model_Dish.h"
+@protocol AddDishDelegate <NSObject>
+- (void)addDish:(Model_Dish *)dish;
+
+@end
 
 @interface AddDishesViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *dishNameTextField;
@@ -15,5 +20,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *chefTextField;
 @property (weak, nonatomic) IBOutlet UITextView *dishDescTextView;
 
-
+@property id<AddDishDelegate> delegate;
 @end

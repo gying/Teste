@@ -16,7 +16,6 @@
 
 @implementation DishesDetailViewController{
     
-//    Model_Dish * _dish;
     ViewController * _rootViewControoler;
 }
 
@@ -35,29 +34,23 @@
     self.chefLabel.text = [NSString stringWithFormat:@"%@",self.dish.fk_chef];
     self.dishDescTextView.text = self.dish.remark;
 }
-
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 //删除
 - (IBAction)tapDeleteButton:(id)sender {
     [TENetManager requestNetWithDic:[TENetManager disableDish:self.dish] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
         //成功
         [self dismissViewControllerAnimated:YES completion:nil];
         //之后跟视图表格更新reloadata
-        [self.delegate dishesReloadData:nil];
+        [self.delegate delDish];
 
     } failure:^(NSError *error, NSURLSessionDataTask *task) {
         //失败
     }];
 
 }
-
 //编辑
 - (IBAction)tapEditButton:(id)sender {
     if ([self.editButton.titleLabel.text isEqualToString:@"编辑"]) {
@@ -98,16 +91,21 @@
         self.dishRatingLabel.text = self.dishRatingEditField.text;
         self.chefLabel.text = self.chefEditField.text;
         [self.editButton setTitle:@"编辑" forState:UIControlStateNormal];
-        
+
 //           [self dismissViewControllerAnimated:YES completion:nil];
         
         self.dish.name = self.dishNameEditField.text;
        self.dish.price = [NSNumber numberWithFloat:[self.dishPriceEditField.text floatValue]];
         self.dish.rating = [NSNumber numberWithFloat:[self.dishRatingEditField.text floatValue]];
         self.dish.fk_chef = [NSNumber numberWithFloat:[self.chefEditField.text floatValue]];
+        self.dish.remark = self.dishDescTextView.text;
         //调用编辑结束后上传接口
-        
-        [self.delegate dishesReloadData:self.dish];
+        [TENetManager requestNetWithDic:[TENetManager updateDish:self.dish] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
+            //完成
+             [self.delegate editDish:self.dish];
+        } failure:^(NSError *error, NSURLSessionDataTask *task) {
+            //失败
+        }];
     }
     
     
