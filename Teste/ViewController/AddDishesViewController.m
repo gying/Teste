@@ -36,7 +36,7 @@
     [TENetManager requestNetWithDic:[TENetManager addDish:dish] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
         //成功之后跟视图表格更新reloadata
         [self dismissViewControllerAnimated:YES completion:nil];
-        
+        [self.delegate addDish:dish];
         } failure:^(NSError *error, NSURLSessionDataTask *task) {
             //失败
         }];

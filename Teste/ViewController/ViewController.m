@@ -12,8 +12,9 @@
 #import <MJExtension.h>
 #import "Model_Dish.h"
 #import "DishesDetailViewController.h"
+#import "AddDishesViewController.h"
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate, DishDelegate> {
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate, DishDelegate,AddDishDelegate> {
     NSMutableArray *_dishesAry;
     DishesDetailViewController * _childController;
     
@@ -25,22 +26,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dishesTableView.delegate = self;
-    self.dishesTableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     //下载数据
     _dishesAry = [NSMutableArray new];
     [self loadDataFromNet];
 
 }
 
-- (void)dishesReloadData:(Model_Dish *)dish {
-    if (dish) {
-        //修改
-        [self.dishesTableView reloadData];
-    } else {
-        //删除
-        [self loadDataFromNet];
-    }
+//添加菜品
+-(void)addDish:(Model_Dish *)dish{
+    [_dishesAry addObject:dish];
+    [self.tableView reloadData];
+}
+//编辑菜品
+-(void)editDish:(Model_Dish *)dish{
+    [self.tableView reloadData];
+}
+//删除菜品
+-(void)delDish{
+    [self loadDataFromNet];
 }
 
 - (void)loadDataFromNet {
@@ -48,7 +53,7 @@
         if (jsonDic) {
             _dishesAry = [Model_Dish mj_objectArrayWithKeyValuesArray:jsonDic];[self dismissViewControllerAnimated:YES completion:nil];
         }
-        [self.dishesTableView reloadData];
+        [self.tableView reloadData];
     } failure:^(NSError *error, NSURLSessionDataTask *task) {
     }];
 }
@@ -90,9 +95,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([@"GoDishesDetailViewController" isEqualToString:segue.identifier]) {
         //进入预付界面
-        Model_Dish * dish = [_dishesAry objectAtIndex:[self.dishesTableView indexPathForCell:sender].row];
+        Model_Dish * dish = [_dishesAry objectAtIndex:[self.tableView indexPathForCell:sender].row];
         DishesDetailViewController *childController = (DishesDetailViewController *)segue.destinationViewController;
         childController.dish = dish;
+        childController.delegate = self;
+    }
+    if ([@"GoAddDishesViewController" isEqualToString:segue.identifier]) {
+        AddDishesViewController * childController = (AddDishesViewController *)segue.destinationViewController;
         childController.delegate = self;
     }
     

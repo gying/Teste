@@ -10,8 +10,8 @@
 #import "Model_Dish.h"
 
 @protocol DishDelegate <NSObject>
-
-- (void)dishesReloadData: (Model_Dish *)dish;
+- (void)delDish;
+- (void)editDish: (Model_Dish *)dish;
 
 @end
 

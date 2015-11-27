@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITableView *dishesTableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *addDishesButton;
 
 @end
