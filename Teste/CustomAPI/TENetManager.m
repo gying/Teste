@@ -127,6 +127,11 @@
                                andRequestType:kUpdateDish];
 }
 
++ (NSMutableDictionary *)allChefs {
+    return [TENetManager toRequestDicWithData:[NSDictionary new]
+                               andRequestType:kAllChefs];
+}
+
 
 
 
