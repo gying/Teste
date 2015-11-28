@@ -340,21 +340,26 @@
                                                 <color key="textColor" red="0.34901960780000002" green="0.81960784310000001" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTI-Ub-JAt">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7j2-FE-TOS">
                                                 <rect key="frame" x="100" y="10" width="480" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="chooseChef:" destination="KZF-D9-2vR" eventType="touchUpInside" id="XWZ-Ht-qSn"/>
+                                                    <segue destination="ael-yV-BMA" kind="show" identifier="GoChooseChefTableViewController" id="7fa-GL-989"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="gTI-Ub-JAt" firstAttribute="top" secondItem="qwG-UB-rjS" secondAttribute="top" constant="10" id="244-c4-buB"/>
-                                            <constraint firstAttribute="trailing" secondItem="gTI-Ub-JAt" secondAttribute="trailing" constant="20" id="NvT-MJ-Uir"/>
+                                            <constraint firstItem="7j2-FE-TOS" firstAttribute="leading" secondItem="rjP-ew-DKc" secondAttribute="trailing" id="E2m-7s-5nM"/>
+                                            <constraint firstAttribute="trailing" secondItem="7j2-FE-TOS" secondAttribute="trailing" constant="20" id="Fck-dC-d15"/>
                                             <constraint firstItem="rjP-ew-DKc" firstAttribute="leading" secondItem="qwG-UB-rjS" secondAttribute="leading" constant="20" id="X15-7R-z3c"/>
                                             <constraint firstItem="rjP-ew-DKc" firstAttribute="top" secondItem="qwG-UB-rjS" secondAttribute="top" constant="10" id="cQb-bz-4sT"/>
-                                            <constraint firstAttribute="bottom" secondItem="gTI-Ub-JAt" secondAttribute="bottom" constant="10" id="gDo-qj-UJj"/>
-                                            <constraint firstItem="gTI-Ub-JAt" firstAttribute="leading" secondItem="rjP-ew-DKc" secondAttribute="trailing" id="kDe-VM-Jd4"/>
+                                            <constraint firstItem="7j2-FE-TOS" firstAttribute="top" secondItem="qwG-UB-rjS" secondAttribute="top" constant="10" id="dc9-oB-1kL"/>
                                             <constraint firstAttribute="height" constant="50" id="lKW-fS-sse"/>
+                                            <constraint firstAttribute="bottom" secondItem="7j2-FE-TOS" secondAttribute="bottom" constant="10" id="sOl-wC-MPI"/>
                                             <constraint firstAttribute="bottom" secondItem="rjP-ew-DKc" secondAttribute="bottom" constant="10" id="vmg-AL-c25"/>
                                         </constraints>
                                     </view>
@@ -440,7 +445,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="chefTextField" destination="gTI-Ub-JAt" id="hpj-th-tPI"/>
+                        <outlet property="chefButton" destination="7j2-FE-TOS" id="Jna-ug-gJG"/>
                         <outlet property="dishDescTextView" destination="g0T-Br-9nb" id="VFl-zW-RZK"/>
                         <outlet property="dishNameTextField" destination="Mm9-gP-fVa" id="F4q-AV-1pE"/>
                         <outlet property="dishPriceTextField" destination="PWl-Ta-4EF" id="b1p-Fg-yR9"/>
@@ -450,6 +455,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zT4-N8-WNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1283" y="168"/>
+        </scene>
+        <!--Choose Chef View Controller-->
+        <scene sceneID="aIj-Qs-MrC">
+            <objects>
+                <viewController id="ael-yV-BMA" customClass="ChooseChefViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L3R-iz-ZKQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ORx-WM-otC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wxZ-oA-gQo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woP-tg-xlX">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="YHH-9C-yRv">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="4Pn-Qt-Ohs">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bMQ-U8-lrm">
+                                                <rect key="frame" x="20" y="7" width="60" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="返回"/>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7UB-3v-g1f">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChooseChefTableViewCell" id="hOb-rY-d7c" customClass="ChooseChefTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hOb-rY-d7c" id="SyP-em-HfK">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ORx-WM-otC" firstAttribute="top" secondItem="7UB-3v-g1f" secondAttribute="bottom" id="KDj-ca-5jG"/>
+                            <constraint firstItem="woP-tg-xlX" firstAttribute="leading" secondItem="wxZ-oA-gQo" secondAttribute="leading" id="QE1-Ot-0Mj"/>
+                            <constraint firstItem="woP-tg-xlX" firstAttribute="top" secondItem="L3R-iz-ZKQ" secondAttribute="bottom" id="RXV-xy-dQU"/>
+                            <constraint firstAttribute="trailing" secondItem="woP-tg-xlX" secondAttribute="trailing" id="Uhb-f9-Bi0"/>
+                            <constraint firstItem="7UB-3v-g1f" firstAttribute="top" secondItem="woP-tg-xlX" secondAttribute="bottom" id="ePD-zH-cQ7"/>
+                            <constraint firstItem="7UB-3v-g1f" firstAttribute="leading" secondItem="wxZ-oA-gQo" secondAttribute="leading" id="lCG-H1-Nh1"/>
+                            <constraint firstAttribute="trailing" secondItem="7UB-3v-g1f" secondAttribute="trailing" id="vuk-er-XOC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="7UB-3v-g1f" id="dpc-c8-R1g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zfl-zQ-QB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="168"/>
         </scene>
         <!--Dishes Detail View Controller-->
         <scene sceneID="Va2-FW-YrH">

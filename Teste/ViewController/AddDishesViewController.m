@@ -9,6 +9,7 @@
 #import "AddDishesViewController.h"
 #import "Model_Dish.h"
 #import "TENetManager.h"
+#import "ChooseChefViewController.h"
 
 @interface AddDishesViewController ()
 
@@ -30,7 +31,8 @@
     dish.name = self.dishNameTextField.text;
     dish.price = [NSNumber numberWithFloat:[self.dishPriceTextField.text floatValue]];
     dish.rating = [NSNumber numberWithFloat:[self.dishRatingTextField.text floatValue]];
-    dish.fk_chef = [NSNumber numberWithFloat:[self.chefTextField.text floatValue]];
+    dish.fk_chef = [NSNumber numberWithFloat:[self.chefButton.titleLabel.text floatValue]];
+    
     dish.remark = self.dishDescTextView.text;
 #pragma mark -- 上传dish
     [TENetManager requestNetWithDic:[TENetManager addDish:dish] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
@@ -40,6 +42,9 @@
         } failure:^(NSError *error, NSURLSessionDataTask *task) {
             //失败
         }];
+}
+//选择厨师
+- (IBAction)chooseChef:(id)sender {
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,14 +60,21 @@
     [self.view endEditing:YES];
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([@"GoChooseChefViewControoler" isEqualToString:segue.identifier]) {
+        //进入预付界面
+//        Model_Dish * dish = [_dishesAry objectAtIndex:[self.tableView indexPathForCell:sender].row];
+//        ChooseChefViewController *childController = (DishesDetailViewController *)segue.destinationViewController;
+//        childController.dish = dish;
+//        childController.delegate = self;
+    }
+
+    
 }
-*/
+
 
 @end

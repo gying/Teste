@@ -15,6 +15,8 @@
 		C65EFD4D1C058D970046BCFC /* Model_Order.m in Sources */ = {isa = PBXBuildFile; fileRef = C65EFD461C058D970046BCFC /* Model_Order.m */; settings = {ASSET_TAGS = (); }; };
 		C65EFD4E1C058D970046BCFC /* Model_User.m in Sources */ = {isa = PBXBuildFile; fileRef = C65EFD481C058D970046BCFC /* Model_User.m */; settings = {ASSET_TAGS = (); }; };
 		C65EFD541C058E860046BCFC /* DishesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C65EFD531C058E860046BCFC /* DishesTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C689313D1C093AC500BAAF3F /* ChooseChefViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C689313C1C093AC500BAAF3F /* ChooseChefViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C68931401C093B5B00BAAF3F /* ChooseChefTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C689313F1C093B5B00BAAF3F /* ChooseChefTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		F0C59D331C054E3700564AC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D321C054E3700564AC6 /* main.m */; };
 		F0C59D361C054E3700564AC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C59D351C054E3700564AC6 /* AppDelegate.m */; };
 		F0C59D3C1C054E3700564AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C59D3A1C054E3700564AC6 /* Main.storyboard */; };
@@ -64,6 +66,10 @@
 		C65EFD481C058D970046BCFC /* Model_User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model_User.m; sourceTree = "<group>"; };
 		C65EFD521C058E860046BCFC /* DishesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishesTableViewCell.h; sourceTree = "<group>"; };
 		C65EFD531C058E860046BCFC /* DishesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishesTableViewCell.m; sourceTree = "<group>"; };
+		C689313B1C093AC500BAAF3F /* ChooseChefViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseChefViewController.h; sourceTree = "<group>"; };
+		C689313C1C093AC500BAAF3F /* ChooseChefViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseChefViewController.m; sourceTree = "<group>"; };
+		C689313E1C093B5B00BAAF3F /* ChooseChefTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseChefTableViewCell.h; sourceTree = "<group>"; };
+		C689313F1C093B5B00BAAF3F /* ChooseChefTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseChefTableViewCell.m; sourceTree = "<group>"; };
 		F0C59D2E1C054E3700564AC6 /* Teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C59D321C054E3700564AC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0C59D341C054E3700564AC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 			children = (
 				C65EFD521C058E860046BCFC /* DishesTableViewCell.h */,
 				C65EFD531C058E860046BCFC /* DishesTableViewCell.m */,
+				C689313E1C093B5B00BAAF3F /* ChooseChefTableViewCell.h */,
+				C689313F1C093B5B00BAAF3F /* ChooseChefTableViewCell.m */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -236,6 +244,8 @@
 				F0C59D6B1C054E7800564AC6 /* DishesDetailViewController.m */,
 				F0C59D6E1C054E7900564AC6 /* ViewController.h */,
 				F0C59D6F1C054E7900564AC6 /* ViewController.m */,
+				C689313B1C093AC500BAAF3F /* ChooseChefViewController.h */,
+				C689313C1C093AC500BAAF3F /* ChooseChefViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -422,11 +432,13 @@
 				C65EFD4D1C058D970046BCFC /* Model_Order.m in Sources */,
 				F0C59D711C054E7900564AC6 /* DishesDetailViewController.m in Sources */,
 				C65EFD541C058E860046BCFC /* DishesTableViewCell.m in Sources */,
+				C689313D1C093AC500BAAF3F /* ChooseChefViewController.m in Sources */,
 				F0C59D781C0552A400564AC6 /* TENetManager.m in Sources */,
 				F0C59D361C054E3700564AC6 /* AppDelegate.m in Sources */,
 				C65EFD4C1C058D970046BCFC /* Model_Dish_Detail.m in Sources */,
 				F0C59D331C054E3700564AC6 /* main.m in Sources */,
 				F0C59D3F1C054E3700564AC6 /* Teste.xcdatamodeld in Sources */,
+				C68931401C093B5B00BAAF3F /* ChooseChefTableViewCell.m in Sources */,
 				C65EFD4A1C058D970046BCFC /* Model_Chef.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

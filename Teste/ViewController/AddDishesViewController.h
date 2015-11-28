@@ -17,7 +17,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *dishNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dishPriceTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dishRatingTextField;
-@property (weak, nonatomic) IBOutlet UITextField *chefTextField;
+
+@property (weak, nonatomic) IBOutlet UIButton *chefButton;
+
 @property (weak, nonatomic) IBOutlet UITextView *dishDescTextView;
 
 @property id<AddDishDelegate> delegate;
