@@ -82,7 +82,7 @@
     }
     
     Model_Dish * dish = [_dishesAry objectAtIndex:indexPath.row];
-    cell.textLabel.text = dish.name;
+    [cell initWithdish:dish];
     return cell;
     
 }

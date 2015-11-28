@@ -8,12 +8,31 @@
 
 #import "DishesTableViewCell.h"
 
+
 @implementation DishesTableViewCell
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+- (void)initWithdish:(Model_Dish *)dish{
+    self.dishNameLabel.text = dish.name;
+    self.chefLabel.text = [NSString stringWithFormat:@"%@",dish.fk_chef];
+    self.priceLabel.text = [NSString stringWithFormat:@"%@",dish.price];
+    self.issuedLabel.text = @"999";
+    self.notIssuedLabel.text = @"999";
+    
+}
 
 - (void)awakeFromNib {
     // Initialization code
