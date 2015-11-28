@@ -31,7 +31,11 @@
 /*
  禁用菜品
  */
-#define kUpdateDish            4
+#define kUpdateDish             4
+/*
+ 所有厨师
+ */
+#define kAllChefs               9
 
 
 
@@ -57,9 +61,10 @@ typedef void (^requestFailureBlock)(NSError *error, NSURLSessionDataTask *task);
 
 + (NSMutableDictionary *)allDishes: (Model_Dish *)dish;
 
-
 + (NSMutableDictionary *)disableDish: (Model_Dish *)dish;
 
 + (NSMutableDictionary *)updateDish: (Model_Dish *)dish;
+
++ (NSMutableDictionary *)allChefs;
 
 @end

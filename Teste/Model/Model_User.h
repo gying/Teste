@@ -17,4 +17,6 @@
 @property(strong,nonatomic)NSString * nickname;
 @property(strong,nonatomic)NSDate * add_time;
 @property(strong,nonatomic)NSNumber * enable;
+@property(strong, nonatomic)NSString *password;
+@property(strong, nonatomic)NSString *remark;
 @end
