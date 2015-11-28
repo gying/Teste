@@ -340,24 +340,34 @@
                                                 <color key="textColor" red="0.34901960780000002" green="0.81960784310000001" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9P-tY-G5Q">
+                                                <rect key="frame" x="100" y="10" width="480" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7j2-FE-TOS">
                                                 <rect key="frame" x="100" y="10" width="480" height="30"/>
-                                                <state key="normal" title="Button">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="chooseChef:" destination="KZF-D9-2vR" eventType="touchUpInside" id="XWZ-Ht-qSn"/>
-                                                    <segue destination="ael-yV-BMA" kind="show" identifier="GoChooseChefTableViewController" id="7fa-GL-989"/>
+                                                    <segue destination="ael-yV-BMA" kind="show" identifier="GoToChooseChef" id="7fa-GL-989"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="r9P-tY-G5Q" firstAttribute="leading" secondItem="rjP-ew-DKc" secondAttribute="trailing" id="C1g-IR-gGu"/>
                                             <constraint firstItem="7j2-FE-TOS" firstAttribute="leading" secondItem="rjP-ew-DKc" secondAttribute="trailing" id="E2m-7s-5nM"/>
                                             <constraint firstAttribute="trailing" secondItem="7j2-FE-TOS" secondAttribute="trailing" constant="20" id="Fck-dC-d15"/>
+                                            <constraint firstAttribute="bottom" secondItem="r9P-tY-G5Q" secondAttribute="bottom" constant="10" id="IGa-YF-Kiy"/>
                                             <constraint firstItem="rjP-ew-DKc" firstAttribute="leading" secondItem="qwG-UB-rjS" secondAttribute="leading" constant="20" id="X15-7R-z3c"/>
                                             <constraint firstItem="rjP-ew-DKc" firstAttribute="top" secondItem="qwG-UB-rjS" secondAttribute="top" constant="10" id="cQb-bz-4sT"/>
                                             <constraint firstItem="7j2-FE-TOS" firstAttribute="top" secondItem="qwG-UB-rjS" secondAttribute="top" constant="10" id="dc9-oB-1kL"/>
+                                            <constraint firstItem="r9P-tY-G5Q" firstAttribute="top" secondItem="qwG-UB-rjS" secondAttribute="top" constant="10" id="fuo-go-mkA"/>
+                                            <constraint firstAttribute="trailing" secondItem="r9P-tY-G5Q" secondAttribute="trailing" constant="20" id="lKK-le-Zwx"/>
                                             <constraint firstAttribute="height" constant="50" id="lKW-fS-sse"/>
                                             <constraint firstAttribute="bottom" secondItem="7j2-FE-TOS" secondAttribute="bottom" constant="10" id="sOl-wC-MPI"/>
                                             <constraint firstAttribute="bottom" secondItem="rjP-ew-DKc" secondAttribute="bottom" constant="10" id="vmg-AL-c25"/>
@@ -445,7 +455,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="chefButton" destination="7j2-FE-TOS" id="Jna-ug-gJG"/>
+                        <outlet property="chefLabel" destination="r9P-tY-G5Q" id="OzV-mN-5qC"/>
                         <outlet property="dishDescTextView" destination="g0T-Br-9nb" id="VFl-zW-RZK"/>
                         <outlet property="dishNameTextField" destination="Mm9-gP-fVa" id="F4q-AV-1pE"/>
                         <outlet property="dishPriceTextField" destination="PWl-Ta-4EF" id="b1p-Fg-yR9"/>
@@ -478,6 +488,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="返回"/>
+                                                <connections>
+                                                    <action selector="tapBackButton:" destination="ael-yV-BMA" eventType="touchUpInside" id="kze-WO-wAW"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -799,7 +812,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="chefEditField" destination="PpZ-ZW-u9x" id="rjJ-aG-LUU"/>
+                        <outlet property="chefEditField" destination="PpZ-ZW-u9x" id="XKG-zT-qKp"/>
                         <outlet property="chefLabel" destination="rk3-Sp-JaG" id="ail-M1-YWW"/>
                         <outlet property="dishDescTextView" destination="ZMh-Ai-uXB" id="n21-KO-6Xy"/>
                         <outlet property="dishNameEditField" destination="47e-j0-UTk" id="UzD-o9-wr5"/>

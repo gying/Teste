@@ -11,7 +11,7 @@
 #import "TENetManager.h"
 #import "ChooseChefViewController.h"
 
-@interface AddDishesViewController ()
+@interface AddDishesViewController () <AddChefDelegate>
 
 @end
 
@@ -31,7 +31,7 @@
     dish.name = self.dishNameTextField.text;
     dish.price = [NSNumber numberWithFloat:[self.dishPriceTextField.text floatValue]];
     dish.rating = [NSNumber numberWithFloat:[self.dishRatingTextField.text floatValue]];
-    dish.fk_chef = [NSNumber numberWithFloat:[self.chefButton.titleLabel.text floatValue]];
+    dish.fk_chef = [NSNumber numberWithFloat:[self.chefLabel.text floatValue]];
     
     dish.remark = self.dishDescTextView.text;
 #pragma mark -- 上传dish
@@ -43,9 +43,7 @@
             //失败
         }];
 }
-//选择厨师
-- (IBAction)chooseChef:(id)sender {
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -60,18 +58,20 @@
     [self.view endEditing:YES];
 }
 
+- (void)addChef:(Model_Chef *)chef {
+    self.chefLabel.text = [NSString stringWithFormat:@"%@",chef.name];
+
+}
+
 
 #pragma mark - Navigation
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([@"GoChooseChefViewControoler" isEqualToString:segue.identifier]) {
-        //进入预付界面
-//        Model_Dish * dish = [_dishesAry objectAtIndex:[self.tableView indexPathForCell:sender].row];
-//        ChooseChefViewController *childController = (DishesDetailViewController *)segue.destinationViewController;
-//        childController.dish = dish;
-//        childController.delegate = self;
-    }
+    if ([@"GoToChooseChef" isEqualToString:segue.identifier]) {
+        ChooseChefViewController *childController = segue.destinationViewController;
+        childController.delegate = self;
+    } 
 
     
 }

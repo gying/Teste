@@ -67,4 +67,7 @@ typedef void (^requestFailureBlock)(NSError *error, NSURLSessionDataTask *task);
 
 + (NSMutableDictionary *)allChefs;
 
+
++ (NSMutableDictionary *)allChefs: (Model_Chef *)chef;
+
 @end

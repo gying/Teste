@@ -132,6 +132,10 @@
                                andRequestType:kAllChefs];
 }
 
++ (NSMutableDictionary *)allChefs: (Model_Chef *)chef {
+    return [TENetManager toRequestDicWithData:chef.mj_keyValues
+                               andRequestType:kAllChefs];
+}
 
 
 

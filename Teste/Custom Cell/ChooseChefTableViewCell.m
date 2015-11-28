@@ -21,11 +21,9 @@
 
 
 
-- (void)initWithdish:(Model_Dish *)dish{
-    
-    self.textLabel.text = [NSString stringWithFormat:@"%@",dish.fk_chef];
-    
-    
+- (void)initWithChef:(Model_Chef *)chef{
+//    self.textLabel.text = [NSString stringWithFormat:@"%@",chef.name];
+    self.textLabel.text = chef.name;
 }
 
 - (void)awakeFromNib {

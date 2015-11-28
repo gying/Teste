@@ -8,12 +8,17 @@
 
 #import "ChooseChefViewController.h"
 #import "ChooseChefTableViewCell.h"
+#import "TENetManager.h"
+#import <MJExtension.h>
+#import "AddDishesViewController.h"
 
 @interface ChooseChefViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
-@implementation ChooseChefViewController
+@implementation ChooseChefViewController{
+    NSMutableArray * _chefAry;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,6 +26,19 @@
     self.tableView.dataSource = self;
     
     // Do any additional setup after loading the view.
+    [self loadDataFromNet];
+}
+
+- (void)loadDataFromNet{
+    [TENetManager requestNetWithDic:[TENetManager allChefs] complete:^(NSString *msgString, id jsonDic, int interType, NSURLSessionDataTask *task) {
+        
+        if (jsonDic) {
+            _chefAry = [Model_Chef mj_objectArrayWithKeyValuesArray:jsonDic];
+        }
+        [self.tableView reloadData];
+    } failure:^(NSError *error, NSURLSessionDataTask *task) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,11 +47,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return _chefAry.count;
 }
-
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -41,21 +56,32 @@
     if (nil == cell) {
         cell = [[ChooseChefTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ChooseChefTableViewCell"];
     }
-    
-//    Model_Dish * dish = [Model_Dish new];
-//    [cell initWithdish:dish];
+    Model_Chef * chef = [_chefAry objectAtIndex:indexPath.row];
+    [cell initWithChef:chef];
+//    cell.textLabel.text = chef.name;
     return cell;
 
     
 }
-/*
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    Model_Chef * chef = [_chefAry objectAtIndex:indexPath.row];
+    [self.delegate addChef:chef];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)tapBackButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+
+
+    
 }
-*/
+
 
 @end

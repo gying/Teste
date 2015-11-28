@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Model_Dish.h"
+#import "Model_Chef.h"
+
 
 @interface ChooseChefTableViewCell : UITableViewCell
 
 
 
-- (void)initWithdish:(Model_Dish *)dish;
+- (void)initWithChef:(Model_Chef *)chef;
 
 @end
