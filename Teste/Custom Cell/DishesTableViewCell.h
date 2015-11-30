@@ -10,6 +10,8 @@
 #import "Model_Dish.h"
 
 @interface DishesTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *allIssuedlabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *issuedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *notIssuedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dishNameLabel;

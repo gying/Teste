@@ -29,8 +29,10 @@
     self.dishNameLabel.text = dish.name;
     self.chefLabel.text = [NSString stringWithFormat:@"%@",dish.fk_chef];
     self.priceLabel.text = [NSString stringWithFormat:@"%@",dish.price];
-    self.issuedLabel.text = @"999";
-    self.notIssuedLabel.text = @"999";
+    self.allIssuedlabel.text = @"99999";
+    self.issuedLabel.text = @"99999";
+    self.notIssuedLabel.text = @"99999";
+
     
 }
 
